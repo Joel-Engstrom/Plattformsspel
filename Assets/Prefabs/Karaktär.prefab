@@ -167,6 +167,7 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpForce: 20
   Smoothing: 0.2
+  targetVelocity: {x: 0, y: 0, z: 0}
   GroundCheck: {fileID: 4110514771709866911}
   WhatIsGround:
     serializedVersion: 2

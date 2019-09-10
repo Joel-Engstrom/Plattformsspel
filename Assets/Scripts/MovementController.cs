@@ -10,6 +10,7 @@ public class MovementController : MonoBehaviour
     public int JumpForce = 100;
     [Range(0f, 0.5f)]
     public float Smoothing = .3f;
+    public Vector3 targetVelocity;
 
     [Header("Checks")]
     public GameObject GroundCheck;
@@ -47,7 +48,7 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 targetVelocity = new Vector2(MoveDirection.x * 10f, rb.velocity.y);
+        targetVelocity = new Vector2(MoveDirection.x * 10f, rb.velocity.y);
 
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref Velocity, Smoothing);
     }
