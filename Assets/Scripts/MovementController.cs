@@ -17,20 +17,24 @@ public class MovementController : MonoBehaviour
     public LayerMask WhatIsGround;
 
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private Animator anim;
 
     private Vector2 MoveDirection;
     private Vector3 Velocity = Vector3.zero;
     private bool CanJump = false;
-    private SpriteRenderer sr;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        anim.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
+
         MoveDirection.x = Input.GetAxisRaw("Horizontal");
         MoveDirection.y = Input.GetAxisRaw("Vertical");
 
