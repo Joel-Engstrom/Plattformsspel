@@ -21,10 +21,12 @@ public class MovementController : MonoBehaviour
     private Vector2 MoveDirection;
     private Vector3 Velocity = Vector3.zero;
     private bool CanJump = false;
+    private SpriteRenderer sr;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -43,6 +45,14 @@ public class MovementController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && CanJump)
         {
             Jump();
+        }
+
+        if (rb.velocity.x > 0.1f)
+        {
+            sr.flipX = true;
+        } else
+        {
+            sr.flipX = false;
         }
     }
 
