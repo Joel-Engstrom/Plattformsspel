@@ -10,7 +10,8 @@ public class MovementController : MonoBehaviour
     public int JumpForce = 100;
     [Range(0f, 0.5f)]
     public float Smoothing = .3f;
-    public Vector3 targetVelocity;
+    [Range(0.1f, 1f)]
+    public float JumpCheck = .4f;
 
     [Header("Checks")]
     public GameObject GroundCheck;
@@ -22,6 +23,7 @@ public class MovementController : MonoBehaviour
 
     private Vector2 MoveDirection;
     private Vector3 Velocity = Vector3.zero;
+    private Vector3 targetVelocity;
     private bool CanJump = false;
     
     void Start()
@@ -38,7 +40,7 @@ public class MovementController : MonoBehaviour
         MoveDirection.x = Input.GetAxisRaw("Horizontal");
         MoveDirection.y = Input.GetAxisRaw("Vertical");
 
-        if (Physics2D.OverlapCircle(GroundCheck.transform.position, 0.2f, WhatIsGround))
+        if (Physics2D.OverlapCircle(GroundCheck.transform.position, JumpCheck, WhatIsGround))
         {
             CanJump = true;
         } else

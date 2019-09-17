@@ -1,18 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ButtonGroupMain;
+    public GameObject ButtonGroupSelection;
+
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene(1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SelectLevel()
     {
-        
+        ButtonGroupMain.SetActive(false);
+        ButtonGroupSelection.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        ButtonGroupMain.SetActive(true);
+        ButtonGroupSelection.SetActive(false);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

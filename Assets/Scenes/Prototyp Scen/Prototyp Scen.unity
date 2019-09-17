@@ -9475,6 +9475,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4110514772742284110, guid: 994da75d2d12ffd47ae9bfdf7afe453b,
+        type: 3}
+      propertyPath: m_Name
+      value: "Karakt\xE4r"
+      objectReference: {fileID: 0}
     - target: {fileID: 4110514772742284096, guid: 994da75d2d12ffd47ae9bfdf7afe453b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9530,15 +9535,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4110514772742284110, guid: 994da75d2d12ffd47ae9bfdf7afe453b,
-        type: 3}
-      propertyPath: m_Name
-      value: "Karakt\xE4r"
-      objectReference: {fileID: 0}
     - target: {fileID: 4110514771709866910, guid: 994da75d2d12ffd47ae9bfdf7afe453b,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.555
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110514772742284101, guid: 994da75d2d12ffd47ae9bfdf7afe453b,
+        type: 3}
+      propertyPath: JumpCheck
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994da75d2d12ffd47ae9bfdf7afe453b, type: 3}
