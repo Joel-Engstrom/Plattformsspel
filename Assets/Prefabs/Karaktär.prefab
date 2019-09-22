@@ -130,9 +130,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.25}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!50 &4110514772742284099
 Rigidbody2D:
   serializedVersion: 4
@@ -169,7 +169,7 @@ MonoBehaviour:
   MoveSpeed: 5
   JumpForce: 30
   Smoothing: 0.2
-  targetVelocity: {x: 0, y: 0, z: 0}
+  JumpCheck: 0.4
   GroundCheck: {fileID: 4110514771709866911}
   WhatIsGround:
     serializedVersion: 2
