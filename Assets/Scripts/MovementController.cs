@@ -55,10 +55,10 @@ public class MovementController : MonoBehaviour
 
         if (rb.velocity.x > 0.1f)
         {
-            sr.flipX = true;
+            sr.flipX = false;
         } else
         {
-            sr.flipX = false;
+            sr.flipX = true;
         }
     }
 
