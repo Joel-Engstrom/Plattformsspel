@@ -7,9 +7,11 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI TimerText;
     private float TimeCounter = 0f;
+
+    private int n1, n2;
     void Update()
     {
         TimeCounter += Time.deltaTime;
-        TimerText.text = TimeCounter.ToString("n1");
+        TimerText.text = string.Format("{0}" , TimeCounter.ToString("f1"));
     }
 }
