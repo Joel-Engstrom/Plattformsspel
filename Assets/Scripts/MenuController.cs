@@ -29,4 +29,14 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadScene(int SceneIndex)
+    {
+        SceneManager.LoadScene(SceneIndex);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
